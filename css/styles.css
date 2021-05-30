@@ -268,6 +268,27 @@ a {
 .work-list .work-list-item:not(:last-child) {
   margin-right: 30px;
 }
+.work-list-item {
+  position: relative;
+}
+.work-list-item .title-overlay {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-color-secondary);
+  background-color: rgba(47, 48, 58, 0.8);
+}
 /*Наша команда*/
 
 .section-team {
@@ -566,6 +587,33 @@ address {
 /* outline: 1px solid teal; */
 /* .project-list-item:nth-child(3n) {
   margin-right: 0;} */
+.project-container-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.project-container-overlay .overlay-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--title-text-color-secondary);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 2500ms linear;
+}
+.project-list-item-link:hover .overlay-title,
+.project-list-item-link:focus .overlay-title {
+  transform: translateY(0%);
+}
+
 .card-content {
   /* background-color: #deeb2a; */
   padding: 20px 24px;
