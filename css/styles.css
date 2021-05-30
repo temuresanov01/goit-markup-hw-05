@@ -101,6 +101,7 @@ a {
   font-size: 26px;
   line-height: 1.19;
   margin-right: 90px;
+  transition: 250ms linear;
 }
 .logo:hover,
 .logo:focus {
@@ -116,6 +117,7 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  transition: 250ms linear;
 }
 .website-nav-list .nav-link-current {
   color: var(--accent-text-color);
@@ -131,6 +133,7 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: 250ms linear;
   /* color: red; */
 }
 .contacts-nav-list .link:hover,
@@ -353,11 +356,13 @@ a {
   height: 44px;
   border-radius: 50%;
   background: #ffffff;
+  transition: background 250ms linear;
 }
 .social-icon {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
+  transition: fill 250ms linear;
 }
 .social-link:hover,
 .social-link:focus {
@@ -387,6 +392,7 @@ a {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
+  transition: fill 250ms linear, border 250ms linear;
 }
 .clients-company-list .company-icon-link:hover,
 .clients-company-list .company-icon-link:focus {
@@ -411,6 +417,7 @@ a {
   display: block;
   margin-top: 0px;
   margin-bottom: 20px;
+  transition: color 250ms linear;
 }
 .logo-white:hover,
 .logo-white:focus {
@@ -429,6 +436,7 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--title-text-color-secondary);
+  transition: color 250ms linear;
 }
 .address:hover,
 .address:focus {
@@ -444,6 +452,7 @@ address {
   display: block;
   margin-top: 9px;
   margin-bottom: 0px;
+  transition: color 250ms linear;
 }
 .footer .link:hover,
 .footer .link:focus {
@@ -484,11 +493,13 @@ address {
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+  transition: background 250ms linear;
 }
 .footer-social-icon {
   width: 20px;
   height: 20px;
   fill: #ffffff;
+  transition: fill 250ms linear;
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -575,6 +586,7 @@ address {
 .project-list-item-link {
   background: #ffffff;
   display: block;
+  transition: box-shadow 250ms linear;
 }
 .project-list-item-link:hover,
 .project-list-item-link:focus {
