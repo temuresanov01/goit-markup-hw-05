@@ -659,6 +659,7 @@ address {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 .is-hidden {
   opacity: 0;
