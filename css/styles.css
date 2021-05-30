@@ -660,7 +660,7 @@ address {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
-.backdrop .is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
