@@ -101,7 +101,7 @@ a {
   font-size: 26px;
   line-height: 1.19;
   margin-right: 90px;
-  transition: 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo:hover,
 .logo:focus {
@@ -117,10 +117,32 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  transition: 250ms linear;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.website-nav-list .nav-link-current {
+.website-nav-list .index-nav-link-current {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   color: var(--accent-text-color);
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.website-nav-list .portfolio-nav-link-current {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--accent-text-color);
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .website-nav-list .nav-link:hover,
 .website-nav-list .nav-link:focus {
@@ -133,7 +155,7 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  transition: 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* color: red; */
 }
 .contacts-nav-list .link:hover,
@@ -143,12 +165,37 @@ a {
 .icon-contacts {
   margin-right: 10px;
   fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-contacts:hover,
 .icon-contacts:focus {
   fill: var(--accent-text-color);
 }
 
+.website-nav-list .index-nav-link-current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-text-color);
+  width: 48px;
+  height: 4px;
+  border: 0;
+  border-radius: 2px;
+}
+.website-nav-list .portfolio-nav-link-current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-text-color);
+  width: 78px;
+  height: 4px;
+  border: 0;
+  border-radius: 2px;
+}
 /* main content*/
 .section-hero {
   background: #c4c4c4;
@@ -190,12 +237,14 @@ a {
   line-height: 1.87;
   display: inline-block;
   letter-spacing: 0.06em;
+  cursor: pointer;
   border-radius: 4px;
   border: none;
   min-width: 200px;
   padding: 10px 32px;
   color: var(--title-text-color-secondary);
   background-color: var(--accent-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -356,13 +405,13 @@ a {
   height: 44px;
   border-radius: 50%;
   background: #ffffff;
-  transition: background 250ms linear;
+  transition: backgraund 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -392,7 +441,8 @@ a {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
-  transition: fill 250ms linear, border 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-company-list .company-icon-link:hover,
 .clients-company-list .company-icon-link:focus {
@@ -417,7 +467,7 @@ a {
   display: block;
   margin-top: 0px;
   margin-bottom: 20px;
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-white:hover,
 .logo-white:focus {
@@ -436,7 +486,7 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--title-text-color-secondary);
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address:hover,
 .address:focus {
@@ -452,7 +502,7 @@ address {
   display: block;
   margin-top: 9px;
   margin-bottom: 0px;
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer .link:hover,
 .footer .link:focus {
@@ -492,18 +542,18 @@ address {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: background 250ms linear;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
   width: 20px;
   height: 20px;
   fill: #ffffff;
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background: var(--accent-text-color);
+  background-color: var(--accent-text-color);
 }
 .footer-social-link:hover .social-icon,
 .footer-social-link:focus .social-icon {
@@ -540,12 +590,16 @@ address {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
   color: var(--title-text-color);
-  background: #f5f4fa;
+  background-color: #f5f4fa;
   display: inline-block;
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-filter-list .button-filter:hover,
 .button-filter-list .button-filter:focus {
@@ -561,6 +615,7 @@ address {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
   background: #f5f4fa;
   display: inline-block;
   border-radius: 4px;
@@ -584,9 +639,9 @@ address {
   margin-top: 30px;
 }
 .project-list-item-link {
-  background: #ffffff;
+  background-color: #ffffff;
   display: block;
-  transition: box-shadow 250ms linear;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-list-item-link:hover,
 .project-list-item-link:focus {
@@ -619,7 +674,7 @@ address {
   letter-spacing: 0.03em;
   overflow: auto;
   transform: translateY(100%);
-  transition: transform 2500ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-list-item-link:hover .overlay-title,
 .project-list-item-link:focus .overlay-title {
@@ -659,7 +714,8 @@ address {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   opacity: 0;
@@ -680,6 +736,7 @@ address {
 }
 .modal-close-button {
   position: absolute;
+  align-items: center;
   top: 8px;
   right: 8px;
   cursor: pointer;
@@ -688,7 +745,7 @@ address {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  padding: 0;
+  padding: 5px 5px 5px 5px;
 }
 .modal-close-button .icon-close {
   width: 18px;
